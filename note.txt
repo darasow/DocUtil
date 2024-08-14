@@ -1,0 +1,192 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dans un contexte général, un client doit de l'argent à une entreprise lorsque le montant total de ses dettes (ou obligations de paiement) est supérieur au montant total de ses paiements effectués. Voici comment cela fonctionne de manière générale :
+Calcul du Solde
+
+    Total des dettes : C'est la somme de toutes les obligations de paiement du client envers l'entreprise. Cela inclut des achats de biens, des services rendus, des frais divers, etc.
+    Total des paiements : C'est la somme de tous les paiements effectués par le client à l'entreprise.
+
+Formule du Solde
+
+Solde=Total des dettes−Total des paiementsSolde=Total des dettes−Total des paiements
+
+
+
+client 902 est dans Siguiri ligne 253 et kankan ligne 58
+client  4 est dans siguiri ligne 296 et bamako ligne 130
+
+client  415 est dans conakry ligne 827 et kankan ligne 181
+client  501 est dans conkary ligne 789 et kankan ligne 103
+
+client  916 est dans conakry ligne 754 et N'zerekore ligne 33 
+client  927 est dans conakry ligne 428 et N'zerekore ligne 32
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pathe@diiwal.com
+. Sealed Class : est un ensemble restreint de hiérarchie de classes
+     c'est une classe abstraite ayant des menbres abstraits
+     Le nombre de class enfant est fixe les enfant doivent etre dans le meme fichier que la Sealed 
+Avantage : Type explicite, verification des cas avec un when
+
+. High Order Function :
+	C'est sont des fonction qu'on peux utiliser comme des variable 	
+		- peut etre transmise en argument (si la fonction ne retourne rien on met Unit)
+		- peut etre retourner par une autre fonction
+		- Lors de la tramission on transmet la reference de la fonction avec ::nomFoction
+. Elvis Operator :
+	C'est le racourcie de if / else 
+	Syntaxe : opet?.value ?: val
+	si opet est null on renvoi val
+. Lazy Init :
+	-C'est une variable qu'on initialise a la premiere fois qu'on y accede
+	-sa permet de declarer la variable comme immutable sans l'initialiser au moment de sa declaration
+	Syntaxe : val nomvar : type by lazy {valItinitial}
+	La fonction lamda n'est appeler qu'une seule fois 
+	Le lateinit est parfait lorsqu'on a un point d'entre unique pour initialiser une variable
+	Le lazy c'est lorsqu'on a une variable qui ne peut etre initialiser qu'une seule fois a un androi precis
+
+
+. Context _ Application :
+	C'est une classe abstraite du framework qui est omnipresente dans tout le systeme
+	C'est le point d'entre pour le framework, le context est toujours fournie par Android c'est
+	a dire qu'on ne vas jamais l'instancier
+		il existe deux niveau de context
+			1-Au niveau de l'activity (local)
+			2-Au niveau de l'application (global) elle est istancier au demmarage et detruit
+				 a l'arret
+. Ressources qualifiers :
+	Qui s'applique sur les ressources
+           layout, drawabl, values
+		Lobjectif est de modifier le comportement d'une ressources 
+                selon l'appareil sur lequel on execute l'appli ou selon l'etat de l'ecrant
+
+. Ressources traductions avec i18n : permet de faire la version des multilangue de l'application
+
+. Nested class : 
+                 c'est une class imbriquée, la class interne n'a pas acces aux données de la class externe
+                 et il n'es pas obligatoire de passer par une instance de la class externe pour acceder a la class interne
+
+inner class : 
+              c'est comme la nested mais la difference est que l'inner class a acces aux donnees externe
+              et il est obligatoire de passer par une instance externe pour acceder a l'inner	
+
+
+. Exceptions :
+             C'est un mecanisme de gestion des erreurs avec le try catch
+
+
+. Collections List
+      liste immutable : 
+	c'est sont des liste ou on peut pas ajouter ou supprimer autres choses une fois que la liste est créer
+	tout les elements de la liste auron le meme type
+	syntaxe :  val liste = listOf<Int>(val1, val2, val3, ....), list<Int> c'est une liste immutable 
+
+      liste mutable :
+         C'est une liste ou on peut bien ajouter ou supprimer un element
+         syntaxe :  val liste = mutableListOf<Int>(val1, val2, val3, ....)
+         
+       
+Collections set :
+        C'est une liste d'element non ordonnée et chaque element ne peut etre present qu'une seule fois dans la collection
+        il existe deux type de collection set
+     ImmutableSet(set<Type>) et mutableSet(mutableSetOf<Type>)
+       syntaxe :  val setListe = mutableSetOf<Int>(val1, val2, val3, ....)
+     
+
+Collections Map:
+         C'est une liste de paire clé/valeur
+         c'est a dire chaque element a ça clé et la valeur
+         ImmutableMap(Map<Int>) et mutableMap(mutableMapOf<Int>)
+         syntaxe :  val imutableMapListe = map<Int>("cl1" of "val1", "cl2" of "cl2")
+         syntaxe :  val mutableMapListe = mutableMapOf<Int>("cl1" of "val1", "cl2" of "cl2")
+         pour ajouter un element on utilise put("cle", "val")
+         
+         for(key in maplist.key) // renvoi les clé
+         for(entry in mapList.entries) // renvoi chque element avec cle valeur
+
+
+
+
+https://www.python.org/downloads/release/python-3123/
+python -m venv ./venv
+.\venv\Scripts\activate
+https://www.youtube.com/watch?v=TNawJpVPaQc
+
+
+Situation du Mois Juin
+
+Mois Juin depuis le (15/06/2024) ou j'ai commencé de noté au 29/06/2024
+
+Harouna Fofana
+v1 : 600 000fg
+v2 : 100 000fg
+v3 : 400 000fg
+Total : 1 100 000fg
+Dettes : 400 000fg
+
+Cherif Bah
+v1 : 300 000fg
+v2 : 300 000fg
+v3 : 300 000fg
+Total : 900 000fg
+Dettes : 0fg
+
+abdoulaye Kante
+v1 : 300 000fg
+v2 : 300 000fg
+v3 : 600 000fg
+Total : 1 200 000fg
+Dettes : 0fg
+
+Mamadou Saliou
+v1 : 300 000fg
+v2 : 300 000fg
+Total : 600 000fg
+Dettes : 300 000fg(Moto dans les main de la police)
+
+Amadou Sadjo
+Total : 0fg
+Dettes : 900 000fg(Moto retiré)
+
+Daouda Diallo 
+Total : 0fg
+Dettes : 900 000fg(Moto perdu)
+
+Abdoulaye Bah
+v1 : 300 000fg
+v2 : 300 000fg
+v3 : 300 000fg
+Total : 900 000fg
+Dettes : 0fg
+
+Total globale du mois : 4 800 000fg
+

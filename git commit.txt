@@ -1,0 +1,491 @@
+https://docs.google.com/spreadsheets/d/1cOTun9q1sNXp3zFrypEBIEYgyfOqXNuwmBQnmZgRfZI/edit?gid=1484683448#gid=1484683448
+https://www.youtube.com/watch?v=x8-xQ0Hksko // music mix tory lanez
+https://www.youtube.com/watch?v=08IN7IibN3k // film
+https://getpocket.com/fr/saves?src=signup // pok fire foxe
+https://www.youtube.com/watch?v=w6Kv1Dcbg1A // yamada
+https://www.youtube.com/watch?v=jFMF32Uuhjo // dragon
+https://www.youtube.com/watch?v=08IN7IibN3k
+
+git branch
+git checkout nom_de_la_branche
+
+
+git status
+
+git add nom_du_fichier_modifié
+
+
+git add .
+
+git commit -m "Message du commit"
+
+git push origin nom_de_la_branche
+
+ git config --global --add safe.directory I:/chemin
+
+
+REST API = Representational State Transfer Application Programming Interface
+// trnasforme Excel en Aplli https://www.youtube.com/watch?v=9D1FJCu7Ksc
+
+https://github.com/asantibanez/livewire-calendar?ref=madewithlaravel.com // pour livewire-calendar-laravel
+https://github.com/ahmed-aliraqi/laravel-media-uploader?tab=readme-ov-file // pour laravel-media-uploader
+https://github.com/barryvdh/laravel-debugbar // debugbar
+ composer require setasign/fpdf:^1.8 // pour les pdf
+http://www.fpdf.org/ // fpdf
+
+
+
+https://javascript.plainenglish.io/get-tailwind-up-running-c454199f72ec
+composer create-project --prefer-dist laravel/laravel nom-de-votre-projet
+
+composer create-project laravel/laravel my-project
+cd my-project
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+// dans config.js
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+// dans le app.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@vite('resources/css/app.css')
+
+
+breez-laravel
+
+composer require laravel/breeze --dev
+
+php artisan breeze:install
+ 
+php artisan migrate
+npm install
+npm run dev
+
+php artisan storage:link
+
+
+/***************** Debut Comment installer tailwind dans django *********/
+https://www.youtube.com/watch?v=ALLT6C4we3g
+
+1-Activer l'environement virtuel
+2-Inst django
+3-Cree le projet
+4-pip install django-tailwind
+5-Ajouter l'appli 'tailwind'
+6-py .\manage.py tailwind install
+7-Ajoute l'appli choisie dans setting
+8->
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+
+
+/***************** Fin Comment installer tailwind dans django *********/
+
+
+
+class Montre {
+    private int heure;
+    private int minute;
+    private Personne porteePar;
+
+    public Montre(int heure, int minute) {
+        setHeure(heure);
+        setMinute(minute);
+        porteePar = null;
+    }
+
+    public void setHeure(int heure) {
+        this.heure = heure % 24; // Limite les heures à 0-23
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute % 60; // Limite les minutes à 0-59
+    }
+
+    public void avancer() {
+        minute++;
+        if (minute == 60) {
+            minute = 0;
+            heure = (heure + 1) % 24;
+        }
+    }
+
+    public int getHeure() {
+        return heure;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
+
+    public boolean estPortee() {
+        return porteePar != null;
+    }
+
+    public void porter(Personne personne) {
+        porteePar = personne;
+    }
+
+    public void enlever() {
+        porteePar = null;
+    }
+
+    public boolean estIdentique(Montre autreMontre) {
+        return heure == autreMontre.heure && minute == autreMontre.minute;
+    }
+}
+
+class Personne {
+    private String nom;
+    private Montre montre;
+
+    public Personne(String nom) {
+        this.nom = nom;
+        montre = null;
+    }
+
+    public void porterMontre(Montre montre) {
+        if (!montre.estPortee()) {
+            this.montre = montre;
+            montre.porter(this);
+        }
+    }
+
+    public void enleverMontre() {
+        if (montre != null) {
+            montre.enlever();
+            montre = null;
+        }
+    }
+
+    public String demanderHeure(Personne autrePersonne) {
+        if (autrePersonne.montre != null) {
+            return String.format("%02d:%02d", autrePersonne.montre.getHeure(), autrePersonne.montre.getMinute());
+        } else {
+            return "";
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Montre montre1 = new Montre(13, 45);
+        Montre montre2 = new Montre(0, 0); // Initialisation avec une autre montre
+        montre2.setHeure(montre1.getHeure());
+        montre2.setMinute(montre1.getMinute());
+
+        Personne personne1 = new Personne("Alice");
+        Personne personne2 = new Personne("Bob");
+
+        personne1.porterMontre(montre1);
+        personne2.porterMontre(montre2);
+
+        System.out.println(personne1.demanderHeure(personne2)); // Affiche "13:45"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Arrays;
+
+public class VecteurOperations {
+    
+    public static void main(String[] args) {
+        int[] T = {2, 5, 1, -3, 0, 4, -2, 7}; // Exemple de tableau T
+        
+        // Détermine le minimum, le maximum et la moyenne des éléments d'un tableau T
+        int min = Arrays.stream(T).min().orElse(Integer.MAX_VALUE);
+        int max = Arrays.stream(T).max().orElse(Integer.MIN_VALUE);
+        double moyenne = Arrays.stream(T).average().orElse(Double.NaN);
+        
+        // Calcule le produit de tous les éléments de T et le nombre de valeurs strictement positives
+        int produit = 1;
+        int valeursPositives = 0;
+        for (int i : T) {
+            if (i > 0) {
+                produit *= i;
+                valeursPositives++;
+            }
+        }
+        
+        // Calcule la somme et le produit scalaire de deux vecteurs (T1 et T2)
+        int[] T1 = {1, 2, 3};
+        int[] T2 = {4, 5, 6};
+        int sommeVecteurs = 0;
+        int produitScalaire = 0;
+        for (int i = 0; i < T1.length; i++) {
+            sommeVecteurs += T1[i] + T2[i];
+            produitScalaire += T1[i] * T2[i];
+        }
+        
+        // Détermine les positions de l'apparition d'une valeur dans un vecteur T
+        int valeurRecherchee = 4;
+        for (int i = 0; i < T.length; i++) {
+            if (T[i] == valeurRecherchee) {
+                System.out.println("La valeur " + valeurRecherchee + " est présente à la position " + i);
+            }
+        }
+        
+        // Inverse le contenu d'un vecteur T
+        int[] TInverse = new int[T.length];
+        for (int i = 0; i < T.length; i++) {
+            TInverse[i] = T[T.length - i - 1];
+        }
+        
+        // Supprime toutes les valeurs nulles d'un vecteur T
+        int[] TSansNulles = Arrays.stream(T).filter(val -> val != 0).toArray();
+        
+        // Met les valeurs négatives au début et les valeurs positives à la fin en utilisant un seul tableau
+        int[] TPositivesNegatives = new int[T.length];
+        int index = 0;
+        for (int i : T) {
+            if (i < 0) {
+                TPositivesNegatives[index++] = i;
+            }
+        }
+        for (int i : T) {
+            if (i >= 0) {
+                TPositivesNegatives[index++] = i;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+Arrays.stream(T) crée un flux (stream) à partir du tableau T, ce qui permet d'effectuer des opérations sur ses éléments de manière fonctionnelle.
+
+Ensuite, .min() est une opération sur ce flux qui retourne le minimum parmi les éléments du tableau. Cette opération peut être utilisée sur n'importe quel type de flux, mais elle est spécialement utile pour les flux d'éléments comparables (comme les nombres entiers).
+
+.orElse(Integer.MAX_VALUE) spécifie une valeur de substitution dans le cas où le flux est vide. Si le tableau T est vide, c'est-à-dire s'il ne contient aucun élément, la méthode min() renverra une valeur Optional<Integer> qui encapsule le résultat minimum trouvé. En utilisant .orElse(Integer.MAX_VALUE), on indique que si le flux est vide, on souhaite retourner Integer.MAX_VALUE comme valeur par défaut.
+
+En résumé, Arrays.stream(T).min().orElse(Integer.MAX_VALUE) renvoie le minimum des éléments du tableau T, ou Integer.MAX_VALUE s'il est vide.
+
+
+
+
+
+
+
+
+
+
+public class SuccessionDeuxValeurs {
+    public static void main(String[] args) {
+        int[] T = {1, 2, 3, 2, 2, 4, 5, 2, 2, 6}; // Vecteur d'entiers
+        
+        int V1 = 2; // Première valeur recherchée
+        int V2 = 4; // Deuxième valeur recherchée
+        
+        int nbSuccessions = countSuccessions(T, V1, V2);
+        
+        System.out.println("Le nombre de successions de " + V1 + " et " + V2 + " dans le vecteur est : " + nbSuccessions);
+    }
+    
+    // Méthode pour compter le nombre de successions de deux valeurs dans le vecteur
+    public static int countSuccessions(int[] arr, int value1, int value2) {
+        int count = 0;
+        
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == value1 && arr[i + 1] == value2) {
+                count++;
+            }
+        }
+        
+        return count;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.Arrays;
+
+public class FusionDeuxVecteurs {
+    public static void main(String[] args) {
+        int[] V1 = {1, 3, 5, 7, 9}; // Premier vecteur trié
+        int[] V2 = {2, 4, 6, 8, 10}; // Deuxième vecteur trié
+        
+        int[] V3 = mergeVectors(V1, V2);
+        
+        System.out.println("Vecteur fusionné V3 : " + Arrays.toString(V3));
+    }
+    
+    // Méthode pour fusionner deux vecteurs triés sans répétition
+    public static int[] mergeVectors(int[] V1, int[] V2) {
+        int n = V1.length;
+        int m = V2.length;
+        int[] V3 = new int[n + m];
+        
+        int i = 0, j = 0, k = 0;
+        
+        // Parcourir les deux vecteurs et fusionner dans V3
+        while (i < n && j < m) {
+            if (V1[i] < V2[j]) {
+                V3[k++] = V1[i++];
+            } else if (V1[i] > V2[j]) {
+                V3[k++] = V2[j++];
+            } else { // Si les éléments sont égaux, n'ajoute qu'une seule fois dans V3
+                V3[k++] = V1[i++];
+                j++;
+            }
+        }
+        
+        // Ajouter les éléments restants de V1 dans V3
+        while (i < n) {
+            V3[k++] = V1[i++];
+        }
+        
+        // Ajouter les éléments restants de V2 dans V3
+        while (j < m) {
+            V3[k++] = V2[j++];
+        }
+        
+        // Redimensionner V3 si nécessaire
+        return Arrays.copyOf(V3, k);
+    }
+}
+
+
+
+
+
+
+
+********************************** Angular - Tailwind **********************
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+https://wind-ui.com/components/carousels/
+
+// activation de windows : irm https://massgrave.dev/get | iex   
+
+
+
+
+
+
+//************      Pour parcourire toutes les images d'un dossier pour les modifier    ***********************//
+
+<?php
+
+use Illuminate\Support\Facades\Storage;
+
+// Chemin du dossier contenant les images dans le stockage public de Laravel
+$dossier = 'public/acceuil/ecole/event/';
+
+// Vérifie si le dossier existe
+if (Storage::exists($dossier)) {
+    // Obtient la liste des fichiers dans le dossier
+    $fichiers = Storage::files($dossier);
+    
+    // Initialisation du compteur
+    $i = 1;
+    
+    // Parcourt chaque fichier dans le dossier
+    foreach ($fichiers as $fichier) {
+        // Obtient le nom de fichier
+        $nomFichier = pathinfo($fichier, PATHINFO_BASENAME);
+        
+        // Obtient l'extension du fichier
+        $extension = pathinfo($fichier, PATHINFO_EXTENSION);
+        
+        // Nouveau nom de fichier avec le compteur
+        $nouveauNom = $i . '.' . $extension;
+        
+        // Renomme le fichier
+        Storage::move($fichier, $dossier . $nouveauNom);
+        
+        // Incrémente le compteur
+        $i++;
+    }
+    
+    echo "Les images ont été renommées avec succès.";
+} else {
+    echo "Le dossier spécifié n'existe pas.";
+}
+?>
+// *************** Fin de  modification image *********************//
+
+
+py -m venv env
+pip install django==3.2.10
+django-admin --version
+npm install -g @angular/cli@15.2.0
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+python manage.py makemigrations sale --empty --name update_status_default
+
+******************** etape pour git d'un projet de groupe ******************
+git reset --hard // reinitialise la branch en une branch specifique
+git status // est une commande de Git qui permet de vérifier l'état de l'arborescence de travail et de l'index de staging.
+git checkout -b nom_branch // nommer une branch
+git add . // ajouter les fichier modifier
+git commit -m "message"
+git pull origin main
+git push origin nom_branch
+
+
+// s'il ya des modife il faut add . et commit avant apres pull
+
+https://faq.whatsapp.com/578442220724722/?locale=fr_FR&cms_platform=android&eea=0
