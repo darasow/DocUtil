@@ -13,7 +13,11 @@ https://www.youtube.com/watch?v=mZDYn3SWCxE
 
 https://learn.microsoft.com/en-us/windows/wsl/install
 
+https://www.youtube.com/watch?v=PwK49_YzwLI // misuc
 
+
+https://github.com/Altgras/sofamer_v2/compare/main...bug_add_versement_and_reglement_client
+https://github.com/Altgras/sofamer_api/compare/bug_add_versement_and_reglement_client?expand=1
 
 
 
