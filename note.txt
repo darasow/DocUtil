@@ -222,3 +222,56 @@ Dettes : 0fg
 
 Total globale du mois : 4 800 000fg
 
+
+
+*********************************** 
+pour generer un token chaque 60 seconde avec typScript
+
+// Fonction pour générer un token unique
+generateUniqueToken(): string {
+  return 'token-' + Math.random().toString(36).substring(2, 9);  // Exemple simple de génération de token
+}
+// Fonction pour vérifier et récupérer un token
+getStoredToken() {
+  const storedToken = localStorage.getItem('payment_token');
+  const tokenTimestamp = localStorage.getItem('token_timestamp');
+  const tokenValidityPeriod = 60 * 1000; // 60 secondes en millisecondes
+  const now = new Date().getTime();
+
+  if (storedToken && tokenTimestamp) {
+    if (now - parseInt(tokenTimestamp) < tokenValidityPeriod) {
+      // Token est encore valide
+      return storedToken;
+    } else {
+      // Token est expiré, générer un nouveau token
+      const newToken = this.generateUniqueToken();
+      localStorage.setItem('payment_token', newToken);
+      localStorage.setItem('token_timestamp', now.toString());
+      return newToken;
+    }
+  } else {
+    // Aucun token stocké, générer un nouveau token
+    const newToken = this.generateUniqueToken();
+    localStorage.setItem('payment_token', newToken);
+    localStorage.setItem('token_timestamp', now.toString());
+    return newToken;
+  }
+}
+
+
+
+
+****************************
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": config('REDIS_URL', default="redis://127.0.0.1:6379/1"),  # Utiliser l'URL Redis depuis .env
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+********************************
+

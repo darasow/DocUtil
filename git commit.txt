@@ -6,6 +6,10 @@ https://www.youtube.com/watch?v=w6Kv1Dcbg1A // yamada
 https://www.youtube.com/watch?v=jFMF32Uuhjo // dragon
 https://www.youtube.com/watch?v=08IN7IibN3k
 
+
+
+
+
 git branch
 git checkout nom_de_la_branche
 
