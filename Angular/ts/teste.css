@@ -1,0 +1,9 @@
+.user-profile {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .user-profile h1 {
+    color: #2c3e50;
+  }

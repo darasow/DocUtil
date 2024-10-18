@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Liste des Code{% endblock %}
+{% block content %}
+    <h2>Liste des Codes</h2>
+    <ul>
+        {% for code in codes %}
+        <li>
+                <span >{{ code.code }}</span>
+            <a style="color : red" href="{% url 'books:code_delete' code.id %}">Supprimer</a>
+            <!-- Mettre à jour un auteur -->
+            <a style="color : green" href="{% url 'books:code_update' code.id %}">Modifier</a>
+        </li>
+        {% endfor %}
+    </ul>
+        <!-- Lien pour ajouter un auteur avec des données factices -->
+        <a href="{% url 'books:add_code' %}">Ajouter un code</a>
+{% endblock %}

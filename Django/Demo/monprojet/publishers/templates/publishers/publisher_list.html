@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Liste des Éditeurs{% endblock %}
+{% block content %}
+    <h2>Liste des Éditeurs</h2>
+    <ul>
+        {% for publisher in publishers %}
+            <li>
+                <a href="{% url 'publishers:publisher_detail' publisher.id %}">{{ publisher.name }}</a>
+                <!-- Supprimer un auteur -->
+                <a style="color : red" href="{% url 'publishers:delete_publisher' publisher.id %}">Supprimer</a>
+                <!-- Mettre à jour un auteur -->
+                <a style="color : green" href="{% url 'publishers:update_publisher' publisher.id %}">Modifier</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'publishers:add_publisher' %}">Ajouter une edition</a>
+{% endblock %}

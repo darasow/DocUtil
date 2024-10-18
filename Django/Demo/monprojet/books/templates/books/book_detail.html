@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Détail du Livre{% endblock %}
+
+{% block content %}
+    <h2>Détails du Livre</h2>
+
+    <p><strong>Titre :</strong> {{ book.title }}</p>
+    <p><strong>Date de publication :</strong> {{ book.publication_date }}</p>
+    <p><strong>Résumé :</strong> {{ book.summary }}</p>
+    <p><strong>Auteur :</strong> <a href="{% url 'authors:author_detail' book.author.id %}">{{ book.author.name }}</a></p>
+    <p><strong>Éditeurs :</strong></p>
+    <ul>
+        {% for publisher in book.publishers.all %}
+            <li>{{ publisher.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'books:book_list' %}">Retour à la liste des livres</a>
+{% endblock %}

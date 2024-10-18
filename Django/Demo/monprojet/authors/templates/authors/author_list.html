@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Liste des Auteurs{% endblock %}
+{% block content %}
+    <h2>Liste des Auteurs</h2>
+    <ul>
+        {% for author in authors %}
+            <li>
+                <a href="{% url 'authors:author_detail' author.id %}">{{ author.name }}</a>
+                <!-- Supprimer un auteur -->
+                <a style="color : red" href="{% url 'authors:delete_author' author.id %}">Supprimer</a>
+                <!-- Mettre à jour un auteur -->
+                <a style="color : green" href="{% url 'authors:update_author' author.id %}">Modifier</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <!-- Lien pour ajouter un auteur avec des données factices -->
+    <a href="{% url 'authors:add_author' %}">Ajouter un auteur</a>
+{% endblock %}

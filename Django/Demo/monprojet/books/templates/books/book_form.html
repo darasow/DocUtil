@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Ajouter un Livre</h2>
+<form method="POST">
+    {% csrf_token %}
+    <!-- Affiche tous les champs du formulaire sous forme de paragraphes -->
+    {{ form.as_p }}  
+    <button type="submit">Ajouter</button>
+</form>
+{% endblock %}

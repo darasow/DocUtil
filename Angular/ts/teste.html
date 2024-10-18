@@ -1,0 +1,35 @@
+<form [formGroup]="etudiantForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" formControlName="nom">
+        @if(etudiantForm.get('nom')?.invalid && etudiantForm.get('nom')?.touched)
+        {
+            @if(etudiantForm.get('nom')?.errors?.['required'])
+            {
+                <small class="text-danger">Le nom est obligatoire.</small>
+            }
+            @if(etudiantForm.get('nom')?.errors?.['minlength'])
+            {
+                <small class="text-danger">Le nom doit contenir au moins 3 caractères.</small>
+            }
+        }
+    </div>
+</form>
+
+
+{% extends "base.html" %}
+{% block title %}Détail de l'éditeur{% endblock %}
+{% block content %}
+  <h2>Détails de l'Éditeur</h2>
+  <p><strong>Nom :</strong> {{ publisher.name }}</p>
+  <h3>Livres publiés par cet éditeur :</h3>
+  <ul>
+    {% for book in publisher.book_set.all %}
+      <li>{{ book.title }} ({{ book.publication_date }})</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'publishers:publisher_list' %}">Retour à la liste des éditeurs</a>
+{% endblock %}
+
+
+

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Ajouter un Code ISBN</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Affiche le champ du code ISBN -->
+    <button type="submit">Ajouter</button>
+</form>
+
+{% endblock  %}
+

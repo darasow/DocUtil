@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Détail de l'Auteur{% endblock %}
+
+{% block content %}
+    <h2>Détails de l'Auteur</h2>
+
+    <p><strong>Nom :</strong> {{ author.name }}</p>
+    <p><strong>Biographie :</strong> {{ author.biography }}</p>
+
+    <h3>Livres de cet auteur :</h3>
+    <ul>
+        {% for book in author.book_set.all %}
+            <li> <a href="{% url 'books:book_detail' book.id %}"> {{ book.title }} </a> ({{ book.publication_date }})</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'authors:author_list' %}">Retour à la liste des auteurs</a>
+    {% endblock %}

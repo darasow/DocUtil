@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Site Django{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur mon site de gestion de livres</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'authors:author_list' %}">Auteurs</a></li>
+                <li><a href="{% url 'books:book_list' %}">Livres</a></li>
+                <li><a href="{% url 'books:code_list' %}">Codes</a></li>
+                <li><a href="{% url 'publishers:publisher_list' %}">Éditeurs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Le contenu spécifique sera injecté ici -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mon Projet Django</p>
+    </footer>
+</body>
+</html>
