@@ -12,6 +12,9 @@ https://docs.djangoproject.com/fr/5.1/intro/tutorial01/
 https://www.youtube.com/watch?v=mZDYn3SWCxE
 
 
+
+
+
 https://www.facebook.com/reel/1095490618921495?locale=fr_FR
 
 
